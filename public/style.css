@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Lato','Arial', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;  /*render our all element in perfect way*/
+}   
+
+/*-------------------------navbar and header section------------------*/
+.head-title {
+    color: white;
+    font-weight: 200;
+    font-size: 32px;
+    word-spacing: 3px;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2,
+h3,
+a {
+	color: #1DA1F2;
+}
+
+a {
+	text-decoration: none;
+}
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.logo a,
+.main-nav a {
+	padding: 10px 15px;
+	text-align: center;
+	display: block;  
+}
+
+.main-nav a {
+	color: white;
+	font-size: .99em;
+}
+
+.main-nav a:hover {
+	color: #718daa;
+}
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	background-color: black;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	
+	}
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+   
+/*----------------------------------product info design--------------------*/
+
+.cart {
+  width: 490px;
+  height: 290px;
+  padding: 5px;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 1;
+  margin-left: 20px;
+  margin-top: 20px;
+  flex: auto auto 0 0;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 15px 15px 30px rgb(107, 107, 107),
+           -15px -15px 30px rgb(11, 11, 11);
+   margin-bottom: 30px;  
+}
+
+.product-img {
+  position: absolute;
+  width: 125px;
+  height: 168px;
+  left: 40px;
+  top: 100px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.product-title{
+  position: absolute;
+  width: 326px;
+  height: 40px;
+  left: 184px;
+  top: 120px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+  font-size: 14px;
+  word-spacing: 1px;
+  color:rgb(170, 167, 167);
+}
+
+.product-price {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12.24px;
+  line-height: 12px;
+  letter-spacing: 0.01em;
+  color:rgb(79, 79, 79);
+  word-spacing: 2px;  
+  position: absolute;
+  justify-content: center;
+  margin-top: 180px;
+  margin-left: 180px;
+}
+
+.card-cart-btn{
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  margin-top: 220px;
+  margin-left: 180px;
+  width: 200px;
+
+ }
+ .prod-cart-btn{
+
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  border-radius: 9px;
+  background: white;
+  border: none;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+     }
+     
+  .prod-cart-btn:hover {
+  box-shadow: 7px 5px 56px -14px #ffffff;
+     }
+     
+  .prod-cart-btn:active {
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -10px #C3D900;
+     }
+    
+
+/*-------------------------------------cart badge------------*/
+.badge{
+    color: white;
+    top:15px;
+    font-size: 50px;
+}
+
+.badge:after{
+    content:attr(value);
+    font-size:12px;
+    background: red;
+    border-radius:50%;
+    padding:3px;
+    position:relative;
+    left:-8px;
+    top:-10px;
+    opacity:0.9;
+  }
+
+/*----------------------------cart---------------------*/
+/*.cart-title{
+    color: white;
+}*/
+
+.cart {
+    width: 510px;
+    height: 290px;
+    padding: 5px;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+    margin-left: 20px;
+    margin-top: 20px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 15px 15px 30px rgb(10, 10, 10),
+             -15px -15px 30px rgb(11, 11, 11);
+}
+
+.cart-prod-img {
+    position: absolute;
+    width: 125px;
+    height: 168px;
+    left: 40px;
+    top: 100px;
+    margin-bottom: 10px;
+    background: url(.png);
+    border-radius: 5px;
+}
+
+.cart-prod-title{
+    position: absolute;
+    width: 326px;
+    height: 40px;
+    left: 184px;
+    top: 120px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: white;
+}
+
+.cart-prod-price {
+    position: absolute;
+    width: 319px;
+    height: 11px;
+    left: 184px;
+    top: 250px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12.24px;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+    color: white;
+}
+
+/* -----------------------------------------cart total section (html in app.js)-----------------*/
+
+#roott{
+    width: 400px;
+    height: 30vh;
+    background-color: black;
+    float: right;
+    margin-top: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+    box-shadow: -15px -15px 30px rgb(86, 86, 86),
+    5px 5px 10px rgb(11, 11, 11);
+}
+
+.check-btn{
+    border: none;
+    background-color: #5757f4;
+    color: white;
+    align-content: center;
+    margin-left: 150px;
+    padding:10px;
+}
+
+/*---------------------------------------------checkout page----------------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+input {
+  caret-color: red;
+}
+
+.container {
+  margin-left: 50px;
+  margin-top: 50px;
+  position: relative;
+  width: 850px;
+  height: 600px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: black;
+  box-shadow: 14px 14px 20px #a4a5a5, 14px 14px 20px rgb(167, 167, 167);
+}
+
+.brand-title {
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: #1DA1F2;
+  letter-spacing: 1px;
+}
+
+.inputs {
+  text-align: left;
+  margin-top: 30px;
+}
+
+input {
+  display: block;
+  width: 50%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+label {
+  margin-bottom: 14px;
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+  display: block;
+  width: 50%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/*
+.labele:nth-of-type(2) {
+  margin-top: 12px;
+}
+*/
+
+input::placeholder {
+  color: gray;
+}
+
+input {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.plc-ord {
+  color: white;
+  margin-top: 40px;
+  background: #1DA1F2;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  transition: 0.5s;
+  display: block;
+  width: 50%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.plc-ord:hover {
+  box-shadow: none;
+}
+
+.side input{
+    width: 360px;
+    background-color: #ecf0f3;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+} 
+
+/*-----------------------------------table section in checkout (html in app.js)----------------*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 100px;
+  color: white;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #D6EEEE;color: black;}
+
+
+/*--------------------------------footer------------------------*/
+.footer-right {
+  float: right;
+  margin-top: -25px;
+  max-width: 200px;
+}
+
+.footer-right a {
+  display: inline-block;
+  width: 30px;
+  height: 35px;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 20px;
+  transition:all .25s;
+}
+
+.footer-right a:hover{transform:scale(2.1); -webkit-transform:scale(1.1);}
+
+.footer-links a:hover{text-decoration:underline;}
